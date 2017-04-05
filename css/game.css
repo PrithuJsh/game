@@ -1,0 +1,152 @@
+body {
+  margin: 10.3%;
+  font-family: "Georgia", serif;
+  line-height: 1.8em; v-min;
+  color: #333;
+}
+ 
+ 
+h1, h2, h3, h4 {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ 
+ 
+#content {
+  margin: 15% 15%;
+  text-align: center;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+    postion: relative;
+    background-image: url('../images/bg.png');
+    background-repeat: no-repeat;
+        background-position: bottom;3
+        width: 83%;
+  padding: 8.5%;
+}
+ 
+#drop {
+  margin: 0 auto 0 auto;
+  background-image: url();
+    background-size: 100% 100%;
+  padding: 17%;
+    
+}
+     
+ 
+.numberP {
+  margin: 0 auto 0 auto;
+    width: 83%;
+  padding: 8.5%;
+}
+ 
+ 
+#drop div{
+  float: right;
+    position: absolute;
+    right:30%;
+  width: 1%;
+  height: 1%;
+  padding: 3%;
+    top:39%;;
+    border: 2px solid #333;
+    opacity: 0.5;
+    text-align: center;
+        
+}
+       
+        @keyframes blink { 
+   50% { border-color: #ff0000; } 
+}
+#drop div   { /*animation to blink border around droppable div*/
+    animation-name: blink ;
+    animation-duration: .5s ;
+    animation-timing-function: step-end ;
+    animation-iteration-count: infinite ;
+    animation-direction: alternate-reverse;
+    
+}
+        .numberP div {
+  float: left;
+  width: 10%;
+
+ 
+}
+          #drop sprite {
+      width: 2%;
+      padding: 5%;
+      display: block;
+      background-image: url("../images/crock.png");
+      background-size: 400%;
+      background-repeat: no-repeat;
+      background-position: 5px 0;
+      float: right;
+      position: absolute;
+      right: 25%;
+      
+    }
+
+    @keyframes sprite {
+     100% {
+       background-position: -100%;}}
+ 
+#drop di:first-child, .numberP div:first-child {
+  margin-left: 0;
+}
+ 
+
+
+ /* div for fish */
+        
+.numberP div {
+  
+    padding: 2%;    
+  color: #fff;
+  font-size: 180%;
+  text-shadow: 0 0 5px #000;
+    background-image: url('../images/fish.png');
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    -webkit-animation-name:ride;
+        -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function:ease-in;
+    -webkit-animation-iteration-count:infinite;
+}
+        @-webkit-keyframes ride{
+            from{-webkit-transform: translateX(0px);}
+            to{-webkit-transform: translateX(100%);}
+            }
+       
+ .numberP div:hover{
+    -moz-box-shadow: 0 0 5px rgba(0,0,0,1);
+	-webkit-box-shadow: 0 0 5px rgba(0,0,0,1);
+	box-shadow: 0 0 5px rgba(0,0,0,1);
+     $(this).stop(true);
+      -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+ }
+        
+.numberP div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+}
+        
+
+#successMessage {
+  position: absolute;
+  z-index: 100;
+  background: #dfd;
+  border: 10% solid #333;
+  -moz-border-radius: 5%;
+  -webkit-border-radius: 5%;
+  border-radius: 5%;
+  -moz-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  box-shadow: .3em .3em .5em rgba(0, 0, 0, .8);
+  padding: 2%;
+}
+    
